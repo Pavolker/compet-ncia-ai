@@ -7,6 +7,7 @@ from backend import database as db
 from backend.analysis import generate_analysis
 
 from backend import collector
+from backend import calculator
 
 # Configuração do caminho de saída
 OUTPUT_FILE = "frontend/data.json"
@@ -27,6 +28,10 @@ def build_static_data():
         # Coleta os dados do CSV para o banco (CRÍTICO para deploy onde o banco começa vazio)
         print("📥 Populando banco de dados a partir do CSV...")
         collector.collect_and_store_data(db_session, use_real_data=True)
+        
+        # Calcula métricas (ESSENCIAL para gerar os ESHMIAs)
+        print("🧮 Calculando métricas e ESHMIA...")
+        calculator.calculate_and_store_metrics(db_session)
         
         print("📊 Consultando banco de dados...")
         
