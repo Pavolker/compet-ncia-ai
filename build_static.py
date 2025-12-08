@@ -92,7 +92,8 @@ def build_static_data():
         # --- Geração da Análise ---
         analise_texto = generate_analysis({
             "modelos": modelos_list,
-            "eshmia_medio": eshmia_medio
+            "eshmia_medio": eshmia_medio,
+            "metricas_agregadas": metricas_agregadas
         })
 
         # --- Montagem do Payload Final ---

@@ -94,7 +94,8 @@ def get_status():
         # Por enquanto, usamos a função de placeholder
         analise_texto = generate_analysis({
             "modelos": modelos_list,
-            "eshmia_medio": eshmia_medio
+            "eshmia_medio": eshmia_medio,
+            "metricas_agregadas": metricas_agregadas
         })
 
         # --- Montagem da Resposta JSON (Item 6.2) ---
