@@ -1,4 +1,5 @@
 [build]
+  command = "pip install -r requirements.txt && python3 build_static.py"
   publish = "frontend"
 
 [[headers]]
