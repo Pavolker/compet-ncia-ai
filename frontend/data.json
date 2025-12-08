@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-12-08T17:35:23.764298",
+  "lista_modelos": [],
+  "eshmia_medio": 0,
+  "metricas_agregadas": {
+    "IFEval": {
+      "maximo": {
+        "modelo": "N/A"
+      },
+      "minimo": {
+        "modelo": "N/A"
+      },
+      "media": 0
+    },
+    "BBH": {
+      "maximo": {
+        "modelo": "N/A"
+      },
+      "minimo": {
+        "modelo": "N/A"
+      },
+      "media": 0
+    },
+    "MATH": {
+      "maximo": {
+        "modelo": "N/A"
+      },
+      "minimo": {
+        "modelo": "N/A"
+      },
+      "media": 0
+    },
+    "GPQA": {
+      "maximo": {
+        "modelo": "N/A"
+      },
+      "minimo": {
+        "modelo": "N/A"
+      },
+      "media": 0
+    },
+    "MUSR": {
+      "maximo": {
+        "modelo": "N/A"
+      },
+      "minimo": {
+        "modelo": "N/A"
+      },
+      "media": 0
+    },
+    "MMLU-PRO": {
+      "maximo": {
+        "modelo": "N/A"
+      },
+      "minimo": {
+        "modelo": "N/A"
+      },
+      "media": 0
+    }
+  },
+  "analise_automatica": "Nenhum dado disponível para análise."
+}
