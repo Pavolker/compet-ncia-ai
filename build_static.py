@@ -6,6 +6,8 @@ from sqlalchemy.orm import joinedload
 from backend import database as db
 from backend.analysis import generate_analysis
 
+from backend import collector
+
 # Configuração do caminho de saída
 OUTPUT_FILE = "frontend/data.json"
 
@@ -17,11 +19,15 @@ def build_static_data():
     print("🚀 Iniciando build estático...")
     
     # Inicializa DB (garante que está tudo correto)
-    # Importante: Supõe que o banco já foi populado pelo collect_data anteriormente
+    print("📦 Inicializando banco de dados...")
     db.init_db()
     
     db_session = next(db.get_db())
     try:
+        # Coleta os dados do CSV para o banco (CRÍTICO para deploy onde o banco começa vazio)
+        print("📥 Populando banco de dados a partir do CSV...")
+        collector.collect_and_store_data(db_session, use_real_data=True)
+        
         print("📊 Consultando banco de dados...")
         
         # --- Consulta de Dados (Cópia da lógica do app.py) ---
