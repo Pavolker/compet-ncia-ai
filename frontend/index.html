@@ -27,6 +27,148 @@
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
 
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir Menu do Livro">
+        <svg viewBox="0 0 24 24" fill="none" class="book-icon">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="toggle-label">Saiba Mais</span>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="bookSidebar">
+        <div class="sidebar-header">
+            <h3>Nosso Conceito de Competências da IA</h3>
+            <button class="close-sidebar" id="closeSidebar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="cards-grid">
+            <div class="thesis-card" data-id="1">
+                <img src="capa zdp.png" alt="Capa do Livro" class="card-image">
+                <div class="card-title">Nosso Livro</div>
+            </div>
+            <div class="thesis-card" data-id="2">
+                <div class="card-icon" style="color: #667eea;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                </div>
+                <div class="card-title">A Nossa Base: Vygotsky</div>
+            </div>
+            <div class="thesis-card" data-id="3">
+                <div class="card-icon" style="color: #4facfe;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 12h8" />
+                        <path d="M12 8v8" />
+                    </svg>
+                </div>
+                <div class="card-title">A ZDP - IA</div>
+            </div>
+            <div class="thesis-card" data-id="4">
+                <div class="card-icon" style="color: #f093fb;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+                <div class="card-title">O Que a ZDP-AI Revela</div>
+            </div>
+            <div class="thesis-card" data-id="5">
+                <div class="card-icon" style="color: #fa709a;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                </div>
+                <div class="card-title">As 6 Competências Humanas</div>
+            </div>
+            <div class="thesis-card" data-id="6">
+                <div class="card-icon" style="color: #00f2fe;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </div>
+                <div class="card-title">Como Se Mede a IA</div>
+            </div>
+            <div class="thesis-card" data-id="7">
+                <div class="card-icon" style="color: #fee140;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M16 12l-4-4-4 4" />
+                        <path d="M12 16V8" />
+                    </svg>
+                </div>
+                <div class="card-title">O Que É o ESHMIA</div>
+            </div>
+            <div class="thesis-card" data-id="8">
+                <div class="card-icon" style="color: #764ba2;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <div class="card-title">O Projeto Centauro</div>
+            </div>
+            <div class="thesis-card" data-id="9">
+                <div class="card-icon" style="color: #4facfe;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                </div>
+                <div class="card-title">IA: Potencializadora</div>
+            </div>
+            <div class="thesis-card" data-id="10">
+                <div class="card-icon" style="color: #fa709a;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                    </svg>
+                </div>
+                <div class="card-title">Os Limites da IA</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Reading Modal -->
+    <div class="modal-backdrop" id="readingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Título da Tese</h3>
+                <button class="close-modal" id="closeModal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <p>Conteúdo em desenvolvimento...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -64,6 +206,52 @@
             <!-- Intro Title -->
             <section class="intro-title">
                 <h2>Painel de Monitoramento das "Competências" dos Modelos de IA em Relação às Competências Humanas</h2>
+            </section>
+
+            <!-- ESHMIA Progress Chart -->
+            <section class="progress-section">
+                <div class="progress-chart-container">
+                    <div class="progress-track-wrapper">
+                        <!-- Icons -->
+                        <div class="progress-icons">
+                            <div class="icon-wrapper computer" title="0.0 - Artificial">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <div class="icon-wrapper human" title="1.0 - Humano">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Track & Fill -->
+                        <div class="progress-track">
+                            <div class="progress-fill" id="eshmiaProgressFill"></div>
+                        </div>
+
+                        <!-- Moving Indicator -->
+                        <div class="progress-indicator" id="eshmiaProgressIndicator" style="left: 0%;">
+                            <div class="indicator-label">ESHMIA MÉDIO: <span id="eshmiaProgressValue">--</span></div>
+                            <div class="indicator-pin"></div>
+                        </div>
+
+                        <!-- Scale Marks -->
+                        <div class="scale-labels">
+                            <span>0.0</span>
+                            <span>0.25</span>
+                            <span>0.50</span>
+                            <span>0.75</span>
+                            <span>1.0</span>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Hero Stats -->
@@ -142,7 +330,7 @@
             <section class="metrics-explanation">
                 <div class="metric-card-explanation" style="border-top: 3px solid #667eea;">
                     <h4 class="metric-title">IFEval</h4>
-                    <p class="metric-subtitle">Obediência</p>
+                    <p class="metric-subtitle">Execução</p>
                     <p class="metric-desc">Segue instruções e cumpre regras de formatação.</p>
                     <div class="metric-value-container">
                         <span class="metric-value-label">Índice ESHMIA</span>
