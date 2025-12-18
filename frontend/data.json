@@ -1,663 +1,1263 @@
 {
-  "timestamp": "2025-12-08T17:54:12.028620",
+  "timestamp": "2025-12-18T11:17:34.211323",
   "lista_modelos": [
     {
-      "nome_normalizado": "llama-3.1-405b-instruct",
-      "valor_eshmia": 0.8994999999999999,
+      "nome_normalizado": "model-x-70b-instruct",
+      "valor_eshmia": 0.8675,
       "valores_normalizados": {
         "IFEval": 0.9209999999999999,
-        "BBH": 0.887,
-        "MATH": 0.912,
-        "GPQA": 0.875,
-        "MUSR": 0.899,
-        "MMLU-PRO": 0.903
-      }
-    },
-    {
-      "nome_normalizado": "nemotron-4-340b-instruct",
-      "valor_eshmia": 0.8929999999999999,
-      "valores_normalizados": {
-        "IFEval": 0.915,
-        "BBH": 0.879,
-        "MATH": 0.905,
-        "GPQA": 0.8690000000000001,
-        "MUSR": 0.893,
-        "MMLU-PRO": 0.897
-      }
-    },
-    {
-      "nome_normalizado": "qwen2.5-72b-instruct",
-      "valor_eshmia": 0.8778333333333334,
-      "valores_normalizados": {
-        "IFEval": 0.9009999999999999,
-        "BBH": 0.865,
-        "MATH": 0.89,
-        "GPQA": 0.852,
-        "MUSR": 0.878,
-        "MMLU-PRO": 0.8809999999999999
-      }
-    },
-    {
-      "nome_normalizado": "mistral-large-2025-instruct",
-      "valor_eshmia": 0.8738333333333334,
-      "valores_normalizados": {
-        "IFEval": 0.897,
-        "BBH": 0.861,
-        "MATH": 0.8859999999999999,
-        "GPQA": 0.848,
-        "MUSR": 0.8740000000000001,
-        "MMLU-PRO": 0.877
-      }
-    },
-    {
-      "nome_normalizado": "gemma-3-27b-instruct",
-      "valor_eshmia": 0.8609999999999999,
-      "valores_normalizados": {
-        "IFEval": 0.885,
-        "BBH": 0.8490000000000001,
-        "MATH": 0.872,
-        "GPQA": 0.835,
-        "MUSR": 0.861,
-        "MMLU-PRO": 0.8640000000000001
-      }
-    },
-    {
-      "nome_normalizado": "deepseek-v3-33b-instruct",
-      "valor_eshmia": 0.8570000000000001,
-      "valores_normalizados": {
-        "IFEval": 0.8809999999999999,
-        "BBH": 0.845,
-        "MATH": 0.868,
-        "GPQA": 0.831,
-        "MUSR": 0.857,
-        "MMLU-PRO": 0.86
-      }
-    },
-    {
-      "nome_normalizado": "falcon-2-180b-instruct",
-      "valor_eshmia": 0.8493333333333334,
-      "valores_normalizados": {
-        "IFEval": 0.875,
-        "BBH": 0.8370000000000001,
-        "MATH": 0.86,
-        "GPQA": 0.823,
-        "MUSR": 0.8490000000000001,
-        "MMLU-PRO": 0.852
-      }
-    },
-    {
-      "nome_normalizado": "llama-3.1-70b-instruct",
-      "valor_eshmia": 0.8453333333333334,
-      "valores_normalizados": {
-        "IFEval": 0.871,
-        "BBH": 0.833,
-        "MATH": 0.856,
-        "GPQA": 0.8190000000000001,
-        "MUSR": 0.845,
-        "MMLU-PRO": 0.848
-      }
-    },
-    {
-      "nome_normalizado": "mixtral-8x22b-instruct-v0.2",
-      "valor_eshmia": 0.8413333333333334,
-      "valores_normalizados": {
-        "IFEval": 0.867,
-        "BBH": 0.8290000000000001,
-        "MATH": 0.852,
-        "GPQA": 0.815,
-        "MUSR": 0.841,
-        "MMLU-PRO": 0.8440000000000001
-      }
-    },
-    {
-      "nome_normalizado": "cohere-command-r-plus-v2",
-      "valor_eshmia": 0.8383333333333334,
-      "valores_normalizados": {
-        "IFEval": 0.8640000000000001,
-        "BBH": 0.826,
-        "MATH": 0.8490000000000001,
-        "GPQA": 0.812,
-        "MUSR": 0.838,
+        "BBH": 0.885,
+        "MATH": 0.789,
+        "GPQA": 0.893,
+        "MUSR": 0.8759999999999999,
         "MMLU-PRO": 0.841
       }
     },
     {
-      "nome_normalizado": "llama-3.1-8b-instruct",
-      "valor_eshmia": 0.8306666666666667,
+      "nome_normalizado": "model-y-70b-base",
+      "valor_eshmia": 0.8641666666666667,
       "valores_normalizados": {
-        "IFEval": 0.858,
-        "BBH": 0.818,
-        "MATH": 0.841,
-        "GPQA": 0.804,
-        "MUSR": 0.83,
-        "MMLU-PRO": 0.833
+        "IFEval": 0.9179999999999999,
+        "BBH": 0.8809999999999999,
+        "MATH": 0.785,
+        "GPQA": 0.89,
+        "MUSR": 0.872,
+        "MMLU-PRO": 0.8390000000000001
       }
     },
     {
-      "nome_normalizado": "phi-3-vision-128k-instruct",
-      "valor_eshmia": 0.8256666666666667,
+      "nome_normalizado": "model-z-70b-chat",
+      "valor_eshmia": 0.8611666666666666,
       "valores_normalizados": {
-        "IFEval": 0.853,
-        "BBH": 0.813,
-        "MATH": 0.836,
-        "GPQA": 0.799,
-        "MUSR": 0.825,
+        "IFEval": 0.915,
+        "BBH": 0.879,
+        "MATH": 0.782,
+        "GPQA": 0.887,
+        "MUSR": 0.8690000000000001,
+        "MMLU-PRO": 0.835
+      }
+    },
+    {
+      "nome_normalizado": "another-llm-65b-instruct",
+      "valor_eshmia": 0.8530000000000001,
+      "valores_normalizados": {
+        "IFEval": 0.905,
+        "BBH": 0.87,
+        "MATH": 0.775,
+        "GPQA": 0.88,
+        "MUSR": 0.86,
         "MMLU-PRO": 0.828
       }
     },
     {
-      "nome_normalizado": "gemma-3-7b-instruct",
-      "valor_eshmia": 0.8206666666666665,
+      "nome_normalizado": "new-gen-model-120b-base",
+      "valor_eshmia": 0.8505000000000001,
       "valores_normalizados": {
-        "IFEval": 0.848,
-        "BBH": 0.8079999999999999,
-        "MATH": 0.831,
-        "GPQA": 0.794,
-        "MUSR": 0.82,
-        "MMLU-PRO": 0.823
+        "IFEval": 0.902,
+        "BBH": 0.868,
+        "MATH": 0.772,
+        "GPQA": 0.878,
+        "MUSR": 0.858,
+        "MMLU-PRO": 0.825
       }
     },
     {
-      "nome_normalizado": "mistral-7b-instruct-v0.3",
-      "valor_eshmia": 0.8156666666666667,
+      "nome_normalizado": "superchat-34b-chat",
+      "valor_eshmia": 0.8473333333333333,
       "valores_normalizados": {
-        "IFEval": 0.843,
-        "BBH": 0.8029999999999999,
-        "MATH": 0.826,
-        "GPQA": 0.789,
-        "MUSR": 0.815,
-        "MMLU-PRO": 0.818
+        "IFEval": 0.899,
+        "BBH": 0.865,
+        "MATH": 0.769,
+        "GPQA": 0.875,
+        "MUSR": 0.855,
+        "MMLU-PRO": 0.821
       }
     },
     {
-      "nome_normalizado": "deepseek-coder-33b-instruct",
-      "valor_eshmia": 0.8126666666666668,
+      "nome_normalizado": "megainstruct-7b-instruct",
+      "valor_eshmia": 0.8433333333333333,
       "valores_normalizados": {
-        "IFEval": 0.84,
-        "BBH": 0.8,
-        "MATH": 0.823,
-        "GPQA": 0.7859999999999999,
-        "MUSR": 0.812,
-        "MMLU-PRO": 0.815
+        "IFEval": 0.895,
+        "BBH": 0.861,
+        "MATH": 0.765,
+        "GPQA": 0.871,
+        "MUSR": 0.851,
+        "MMLU-PRO": 0.8170000000000001
       }
     },
     {
-      "nome_normalizado": "qwen2.5-20b-instruct",
-      "valor_eshmia": 0.8086666666666665,
+      "nome_normalizado": "foundation-model-13b-base",
+      "valor_eshmia": 0.8403333333333332,
       "valores_normalizados": {
-        "IFEval": 0.836,
-        "BBH": 0.7959999999999999,
-        "MATH": 0.8190000000000001,
-        "GPQA": 0.782,
-        "MUSR": 0.8079999999999999,
-        "MMLU-PRO": 0.8109999999999999
+        "IFEval": 0.892,
+        "BBH": 0.858,
+        "MATH": 0.762,
+        "GPQA": 0.868,
+        "MUSR": 0.848,
+        "MMLU-PRO": 0.8140000000000001
       }
     },
     {
-      "nome_normalizado": "llama-3-70b-instruct",
-      "valor_eshmia": 0.8056666666666666,
+      "nome_normalizado": "opentalk-20b-chat",
+      "valor_eshmia": 0.8363333333333335,
       "valores_normalizados": {
-        "IFEval": 0.833,
-        "BBH": 0.7929999999999999,
-        "MATH": 0.816,
-        "GPQA": 0.779,
-        "MUSR": 0.805,
-        "MMLU-PRO": 0.8079999999999999
+        "IFEval": 0.888,
+        "BBH": 0.8540000000000001,
+        "MATH": 0.758,
+        "GPQA": 0.8640000000000001,
+        "MUSR": 0.8440000000000001,
+        "MMLU-PRO": 0.81
       }
     },
     {
-      "nome_normalizado": "starling-lm-7b-beta",
-      "valor_eshmia": 0.8006666666666665,
+      "nome_normalizado": "advanced-instruct-40b",
+      "valor_eshmia": 0.8313333333333334,
       "valores_normalizados": {
-        "IFEval": 0.828,
-        "BBH": 0.7879999999999999,
-        "MATH": 0.8109999999999999,
-        "GPQA": 0.774,
-        "MUSR": 0.8,
-        "MMLU-PRO": 0.8029999999999999
+        "IFEval": 0.883,
+        "BBH": 0.8490000000000001,
+        "MATH": 0.753,
+        "GPQA": 0.8590000000000001,
+        "MUSR": 0.8390000000000001,
+        "MMLU-PRO": 0.805
       }
     },
     {
-      "nome_normalizado": "openhermes-2.5-mistral-7b",
-      "valor_eshmia": 0.7976666666666666,
+      "nome_normalizado": "core-llm-7b-base",
+      "valor_eshmia": 0.8283333333333333,
       "valores_normalizados": {
-        "IFEval": 0.825,
-        "BBH": 0.785,
-        "MATH": 0.8079999999999999,
-        "GPQA": 0.7709999999999999,
-        "MUSR": 0.797,
-        "MMLU-PRO": 0.8
+        "IFEval": 0.88,
+        "BBH": 0.846,
+        "MATH": 0.75,
+        "GPQA": 0.856,
+        "MUSR": 0.836,
+        "MMLU-PRO": 0.802
       }
     },
     {
-      "nome_normalizado": "nous-hermes-2-mixtral-8x7b-dpo",
-      "valor_eshmia": 0.7956666666666666,
+      "nome_normalizado": "dialogue-master-13b-chat",
+      "valor_eshmia": 0.8253333333333334,
       "valores_normalizados": {
-        "IFEval": 0.823,
-        "BBH": 0.7829999999999999,
-        "MATH": 0.8059999999999999,
-        "GPQA": 0.769,
-        "MUSR": 0.795,
-        "MMLU-PRO": 0.7979999999999999
+        "IFEval": 0.877,
+        "BBH": 0.843,
+        "MATH": 0.747,
+        "GPQA": 0.853,
+        "MUSR": 0.833,
+        "MMLU-PRO": 0.799
       }
     },
     {
-      "nome_normalizado": "llama-3-8b-instruct",
-      "valor_eshmia": 0.7926666666666667,
+      "nome_normalizado": "precision-instruct-30b",
+      "valor_eshmia": 0.8213333333333335,
       "valores_normalizados": {
-        "IFEval": 0.82,
-        "BBH": 0.78,
-        "MATH": 0.8029999999999999,
-        "GPQA": 0.7659999999999999,
-        "MUSR": 0.792,
+        "IFEval": 0.873,
+        "BBH": 0.8390000000000001,
+        "MATH": 0.743,
+        "GPQA": 0.8490000000000001,
+        "MUSR": 0.8290000000000001,
         "MMLU-PRO": 0.795
       }
     },
     {
-      "nome_normalizado": "yi-34b-200k-dare-sft",
-      "valor_eshmia": 0.7896666666666666,
+      "nome_normalizado": "omni-model-70b-base",
+      "valor_eshmia": 0.8183333333333334,
       "valores_normalizados": {
-        "IFEval": 0.8170000000000001,
-        "BBH": 0.777,
-        "MATH": 0.8,
-        "GPQA": 0.763,
-        "MUSR": 0.789,
+        "IFEval": 0.87,
+        "BBH": 0.836,
+        "MATH": 0.74,
+        "GPQA": 0.846,
+        "MUSR": 0.826,
         "MMLU-PRO": 0.792
       }
     },
     {
-      "nome_normalizado": "dolphin-2.9-llama-3-8b",
-      "valor_eshmia": 0.7856666666666666,
+      "nome_normalizado": "fluent-ai-40b-chat",
+      "valor_eshmia": 0.8143333333333334,
       "valores_normalizados": {
-        "IFEval": 0.813,
-        "BBH": 0.773,
-        "MATH": 0.7959999999999999,
-        "GPQA": 0.759,
-        "MUSR": 0.785,
+        "IFEval": 0.866,
+        "BBH": 0.8320000000000001,
+        "MATH": 0.736,
+        "GPQA": 0.8420000000000001,
+        "MUSR": 0.8220000000000001,
         "MMLU-PRO": 0.7879999999999999
       }
     },
     {
-      "nome_normalizado": "openchat-3.5-7b-128k",
-      "valor_eshmia": 0.7826666666666666,
+      "nome_normalizado": "taskmaster-10b-instruct",
+      "valor_eshmia": 0.8113333333333332,
       "valores_normalizados": {
-        "IFEval": 0.81,
-        "BBH": 0.77,
-        "MATH": 0.7929999999999999,
-        "GPQA": 0.7559999999999999,
-        "MUSR": 0.782,
+        "IFEval": 0.863,
+        "BBH": 0.8290000000000001,
+        "MATH": 0.733,
+        "GPQA": 0.8390000000000001,
+        "MUSR": 0.8190000000000001,
         "MMLU-PRO": 0.785
       }
     },
     {
-      "nome_normalizado": "zephyr-7b-beta",
-      "valor_eshmia": 0.7796666666666666,
+      "nome_normalizado": "unified-llm-20b-base",
+      "valor_eshmia": 0.8073333333333333,
       "valores_normalizados": {
-        "IFEval": 0.807,
-        "BBH": 0.767,
-        "MATH": 0.79,
-        "GPQA": 0.753,
-        "MUSR": 0.779,
-        "MMLU-PRO": 0.782
+        "IFEval": 0.8590000000000001,
+        "BBH": 0.825,
+        "MATH": 0.7290000000000001,
+        "GPQA": 0.835,
+        "MUSR": 0.815,
+        "MMLU-PRO": 0.7809999999999999
       }
     },
     {
-      "nome_normalizado": "stable-code-instruct-3b",
-      "valor_eshmia": 0.7756666666666666,
+      "nome_normalizado": "converse-pro-7b-chat",
+      "valor_eshmia": 0.8043333333333335,
       "valores_normalizados": {
-        "IFEval": 0.8029999999999999,
-        "BBH": 0.763,
-        "MATH": 0.7859999999999999,
-        "GPQA": 0.7490000000000001,
-        "MUSR": 0.775,
+        "IFEval": 0.856,
+        "BBH": 0.8220000000000001,
+        "MATH": 0.726,
+        "GPQA": 0.8320000000000001,
+        "MUSR": 0.812,
         "MMLU-PRO": 0.778
       }
     },
     {
-      "nome_normalizado": "codellama-70b-instruct-v2",
-      "valor_eshmia": 0.7726666666666667,
+      "nome_normalizado": "logic-engine-50b-instruct",
+      "valor_eshmia": 0.8003333333333332,
+      "valores_normalizados": {
+        "IFEval": 0.852,
+        "BBH": 0.818,
+        "MATH": 0.722,
+        "GPQA": 0.828,
+        "MUSR": 0.8079999999999999,
+        "MMLU-PRO": 0.774
+      }
+    },
+    {
+      "nome_normalizado": "global-brain-100b-base",
+      "valor_eshmia": 0.7973333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.8490000000000001,
+        "BBH": 0.815,
+        "MATH": 0.7190000000000001,
+        "GPQA": 0.825,
+        "MUSR": 0.805,
+        "MMLU-PRO": 0.7709999999999999
+      }
+    },
+    {
+      "nome_normalizado": "quickchat-15b-chat",
+      "valor_eshmia": 0.7933333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.845,
+        "BBH": 0.8109999999999999,
+        "MATH": 0.715,
+        "GPQA": 0.821,
+        "MUSR": 0.8009999999999999,
+        "MMLU-PRO": 0.767
+      }
+    },
+    {
+      "nome_normalizado": "smartguide-25b-instruct",
+      "valor_eshmia": 0.7903333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.8420000000000001,
+        "BBH": 0.8079999999999999,
+        "MATH": 0.7120000000000001,
+        "GPQA": 0.818,
+        "MUSR": 0.7979999999999999,
+        "MMLU-PRO": 0.764
+      }
+    },
+    {
+      "nome_normalizado": "nextgen-llm-8b-base",
+      "valor_eshmia": 0.7863333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.838,
+        "BBH": 0.804,
+        "MATH": 0.708,
+        "GPQA": 0.8140000000000001,
+        "MUSR": 0.794,
+        "MMLU-PRO": 0.76
+      }
+    },
+    {
+      "nome_normalizado": "interactive-ai-30b-chat",
+      "valor_eshmia": 0.7833333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.835,
+        "BBH": 0.8009999999999999,
+        "MATH": 0.705,
+        "GPQA": 0.8109999999999999,
+        "MUSR": 0.7909999999999999,
+        "MMLU-PRO": 0.757
+      }
+    },
+    {
+      "nome_normalizado": "deepthought-60b-instruct",
+      "valor_eshmia": 0.7793333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.831,
+        "BBH": 0.797,
+        "MATH": 0.701,
+        "GPQA": 0.807,
+        "MUSR": 0.787,
+        "MMLU-PRO": 0.753
+      }
+    },
+    {
+      "nome_normalizado": "quantum-llm-12b-base",
+      "valor_eshmia": 0.7763333333333332,
+      "valores_normalizados": {
+        "IFEval": 0.828,
+        "BBH": 0.794,
+        "MATH": 0.698,
+        "GPQA": 0.804,
+        "MUSR": 0.784,
+        "MMLU-PRO": 0.75
+      }
+    },
+    {
+      "nome_normalizado": "echobot-22b-chat",
+      "valor_eshmia": 0.7723333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.8240000000000001,
+        "BBH": 0.79,
+        "MATH": 0.6940000000000001,
+        "GPQA": 0.8,
+        "MUSR": 0.78,
+        "MMLU-PRO": 0.746
+      }
+    },
+    {
+      "nome_normalizado": "cognito-instruct-45b",
+      "valor_eshmia": 0.7693333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.821,
+        "BBH": 0.787,
+        "MATH": 0.691,
+        "GPQA": 0.797,
+        "MUSR": 0.777,
+        "MMLU-PRO": 0.743
+      }
+    },
+    {
+      "nome_normalizado": "pioneer-llm-90b-base",
+      "valor_eshmia": 0.7653333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.8170000000000001,
+        "BBH": 0.7829999999999999,
+        "MATH": 0.687,
+        "GPQA": 0.7929999999999999,
+        "MUSR": 0.773,
+        "MMLU-PRO": 0.7390000000000001
+      }
+    },
+    {
+      "nome_normalizado": "nexus-chat-35b",
+      "valor_eshmia": 0.7623333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.8140000000000001,
+        "BBH": 0.78,
+        "MATH": 0.684,
+        "GPQA": 0.79,
+        "MUSR": 0.77,
+        "MMLU-PRO": 0.736
+      }
+    },
+    {
+      "nome_normalizado": "mentor-ai-18b-instruct",
+      "valor_eshmia": 0.7583333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.81,
+        "BBH": 0.7759999999999999,
+        "MATH": 0.68,
+        "GPQA": 0.7859999999999999,
+        "MUSR": 0.7659999999999999,
+        "MMLU-PRO": 0.732
+      }
+    },
+    {
+      "nome_normalizado": "epoch-llm-6b-base",
+      "valor_eshmia": 0.7553333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.807,
+        "BBH": 0.773,
+        "MATH": 0.677,
+        "GPQA": 0.7829999999999999,
+        "MUSR": 0.763,
+        "MMLU-PRO": 0.7290000000000001
+      }
+    },
+    {
+      "nome_normalizado": "oracle-chat-28b",
+      "valor_eshmia": 0.7513333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.8029999999999999,
+        "BBH": 0.769,
+        "MATH": 0.6729999999999999,
+        "GPQA": 0.779,
+        "MUSR": 0.759,
+        "MMLU-PRO": 0.725
+      }
+    },
+    {
+      "nome_normalizado": "wisdom-weaver-55b-instruct",
+      "valor_eshmia": 0.7483333333333332,
       "valores_normalizados": {
         "IFEval": 0.8,
-        "BBH": 0.76,
-        "MATH": 0.7829999999999999,
-        "GPQA": 0.746,
-        "MUSR": 0.772,
-        "MMLU-PRO": 0.775
+        "BBH": 0.7659999999999999,
+        "MATH": 0.67,
+        "GPQA": 0.7759999999999999,
+        "MUSR": 0.7559999999999999,
+        "MMLU-PRO": 0.722
       }
     },
     {
-      "nome_normalizado": "wizardlm-70b-v1.0",
-      "valor_eshmia": 0.7696666666666666,
+      "nome_normalizado": "universal-model-110b-base",
+      "valor_eshmia": 0.7443333333333332,
       "valores_normalizados": {
-        "IFEval": 0.797,
-        "BBH": 0.757,
-        "MATH": 0.78,
-        "GPQA": 0.743,
-        "MUSR": 0.769,
-        "MMLU-PRO": 0.772
-      }
-    },
-    {
-      "nome_normalizado": "tinyllama-1.1b-chat-v1.0",
-      "valor_eshmia": 0.7656666666666666,
-      "valores_normalizados": {
-        "IFEval": 0.7929999999999999,
-        "BBH": 0.753,
-        "MATH": 0.7759999999999999,
-        "GPQA": 0.7390000000000001,
-        "MUSR": 0.765,
-        "MMLU-PRO": 0.768
-      }
-    },
-    {
-      "nome_normalizado": "mpt-7b-instruct",
-      "valor_eshmia": 0.7626666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.79,
-        "BBH": 0.75,
-        "MATH": 0.773,
-        "GPQA": 0.736,
-        "MUSR": 0.762,
-        "MMLU-PRO": 0.765
-      }
-    },
-    {
-      "nome_normalizado": "falcon-7b-instruct",
-      "valor_eshmia": 0.7586666666666666,
-      "valores_normalizados": {
-        "IFEval": 0.7859999999999999,
-        "BBH": 0.746,
-        "MATH": 0.769,
-        "GPQA": 0.732,
-        "MUSR": 0.758,
-        "MMLU-PRO": 0.7609999999999999
-      }
-    },
-    {
-      "nome_normalizado": "vicuna-33b-v1.5",
-      "valor_eshmia": 0.7556666666666666,
-      "valores_normalizados": {
-        "IFEval": 0.7829999999999999,
-        "BBH": 0.743,
-        "MATH": 0.7659999999999999,
-        "GPQA": 0.7290000000000001,
-        "MUSR": 0.755,
-        "MMLU-PRO": 0.758
-      }
-    },
-    {
-      "nome_normalizado": "guanaco-65b",
-      "valor_eshmia": 0.7526666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.78,
-        "BBH": 0.74,
-        "MATH": 0.763,
-        "GPQA": 0.726,
+        "IFEval": 0.7959999999999999,
+        "BBH": 0.762,
+        "MATH": 0.6659999999999999,
+        "GPQA": 0.772,
         "MUSR": 0.752,
-        "MMLU-PRO": 0.755
-      }
-    },
-    {
-      "nome_normalizado": "openassistant-llama2-13b-orca-8k-3319",
-      "valor_eshmia": 0.7486666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.7759999999999999,
-        "BBH": 0.736,
-        "MATH": 0.759,
-        "GPQA": 0.722,
-        "MUSR": 0.748,
-        "MMLU-PRO": 0.7509999999999999
-      }
-    },
-    {
-      "nome_normalizado": "stable-beluga-7b",
-      "valor_eshmia": 0.7456666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.773,
-        "BBH": 0.733,
-        "MATH": 0.7559999999999999,
-        "GPQA": 0.7190000000000001,
-        "MUSR": 0.745,
-        "MMLU-PRO": 0.748
-      }
-    },
-    {
-      "nome_normalizado": "llama-2-70b-chat-hf",
-      "valor_eshmia": 0.7416666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.769,
-        "BBH": 0.7290000000000001,
-        "MATH": 0.752,
-        "GPQA": 0.715,
-        "MUSR": 0.741,
-        "MMLU-PRO": 0.7440000000000001
-      }
-    },
-    {
-      "nome_normalizado": "platypus2-70b-instruct",
-      "valor_eshmia": 0.7386666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.7659999999999999,
-        "BBH": 0.726,
-        "MATH": 0.7490000000000001,
-        "GPQA": 0.7120000000000001,
-        "MUSR": 0.738,
-        "MMLU-PRO": 0.741
-      }
-    },
-    {
-      "nome_normalizado": "nous-hermes-llama2-13b",
-      "valor_eshmia": 0.7356666666666666,
-      "valores_normalizados": {
-        "IFEval": 0.763,
-        "BBH": 0.723,
-        "MATH": 0.746,
-        "GPQA": 0.7090000000000001,
-        "MUSR": 0.735,
-        "MMLU-PRO": 0.738
-      }
-    },
-    {
-      "nome_normalizado": "xwin-lm-70b-v0.1",
-      "valor_eshmia": 0.7316666666666668,
-      "valores_normalizados": {
-        "IFEval": 0.759,
-        "BBH": 0.7190000000000001,
-        "MATH": 0.742,
-        "GPQA": 0.705,
-        "MUSR": 0.731,
-        "MMLU-PRO": 0.7340000000000001
-      }
-    },
-    {
-      "nome_normalizado": "llama-2-13b-chat-hf",
-      "valor_eshmia": 0.7286666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.7559999999999999,
-        "BBH": 0.716,
-        "MATH": 0.7390000000000001,
-        "GPQA": 0.7020000000000001,
-        "MUSR": 0.728,
-        "MMLU-PRO": 0.731
-      }
-    },
-    {
-      "nome_normalizado": "openorca-mistral-7b-8k",
-      "valor_eshmia": 0.7256666666666666,
-      "valores_normalizados": {
-        "IFEval": 0.753,
-        "BBH": 0.713,
-        "MATH": 0.736,
-        "GPQA": 0.6990000000000001,
-        "MUSR": 0.725,
-        "MMLU-PRO": 0.728
-      }
-    },
-    {
-      "nome_normalizado": "codellama-34b-instruct-v2",
-      "valor_eshmia": 0.7216666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.7490000000000001,
-        "BBH": 0.7090000000000001,
-        "MATH": 0.732,
-        "GPQA": 0.695,
-        "MUSR": 0.721,
-        "MMLU-PRO": 0.7240000000000001
-      }
-    },
-    {
-      "nome_normalizado": "vicuna-13b-v1.5",
-      "valor_eshmia": 0.7186666666666667,
-      "valores_normalizados": {
-        "IFEval": 0.746,
-        "BBH": 0.706,
-        "MATH": 0.7290000000000001,
-        "GPQA": 0.6920000000000001,
-        "MUSR": 0.718,
-        "MMLU-PRO": 0.721
-      }
-    },
-    {
-      "nome_normalizado": "llama-2-7b-chat-hf",
-      "valor_eshmia": 0.7156666666666666,
-      "valores_normalizados": {
-        "IFEval": 0.743,
-        "BBH": 0.703,
-        "MATH": 0.726,
-        "GPQA": 0.6890000000000001,
-        "MUSR": 0.715,
         "MMLU-PRO": 0.718
       }
     },
     {
-      "nome_normalizado": "stable-vicuna-13b-gptq",
-      "valor_eshmia": 0.7116666666666668,
+      "nome_normalizado": "insight-bot-42b-chat",
+      "valor_eshmia": 0.7413333333333334,
       "valores_normalizados": {
-        "IFEval": 0.7390000000000001,
-        "BBH": 0.6990000000000001,
-        "MATH": 0.722,
-        "GPQA": 0.685,
-        "MUSR": 0.711,
-        "MMLU-PRO": 0.7140000000000001
+        "IFEval": 0.7929999999999999,
+        "BBH": 0.759,
+        "MATH": 0.6629999999999999,
+        "GPQA": 0.769,
+        "MUSR": 0.7490000000000001,
+        "MMLU-PRO": 0.715
       }
     },
     {
-      "nome_normalizado": "gemma-2b-instruct",
-      "valor_eshmia": 0.7086666666666667,
+      "nome_normalizado": "guidance-llm-16b-instruct",
+      "valor_eshmia": 0.7373333333333334,
       "valores_normalizados": {
-        "IFEval": 0.736,
-        "BBH": 0.696,
-        "MATH": 0.7190000000000001,
-        "GPQA": 0.682,
-        "MUSR": 0.708,
+        "IFEval": 0.789,
+        "BBH": 0.755,
+        "MATH": 0.659,
+        "GPQA": 0.765,
+        "MUSR": 0.745,
         "MMLU-PRO": 0.711
       }
     },
     {
-      "nome_normalizado": "pythia-12b-instruct",
-      "valor_eshmia": 0.7056666666666667,
+      "nome_normalizado": "core-intelligence-25b-base",
+      "valor_eshmia": 0.7343333333333333,
       "valores_normalizados": {
-        "IFEval": 0.733,
-        "BBH": 0.693,
-        "MATH": 0.716,
-        "GPQA": 0.679,
-        "MUSR": 0.705,
+        "IFEval": 0.7859999999999999,
+        "BBH": 0.752,
+        "MATH": 0.6559999999999999,
+        "GPQA": 0.762,
+        "MUSR": 0.742,
         "MMLU-PRO": 0.708
       }
     },
     {
-      "nome_normalizado": "dolly-v2-12b",
-      "valor_eshmia": 0.7016666666666667,
+      "nome_normalizado": "persona-ai-10b-chat",
+      "valor_eshmia": 0.7303333333333334,
       "valores_normalizados": {
-        "IFEval": 0.7290000000000001,
-        "BBH": 0.6890000000000001,
-        "MATH": 0.7120000000000001,
-        "GPQA": 0.675,
-        "MUSR": 0.701,
+        "IFEval": 0.782,
+        "BBH": 0.748,
+        "MATH": 0.652,
+        "GPQA": 0.758,
+        "MUSR": 0.738,
         "MMLU-PRO": 0.7040000000000001
       }
     },
     {
-      "nome_normalizado": "bloom-7b1-chat",
-      "valor_eshmia": 0.6986666666666667,
+      "nome_normalizado": "directive-model-75b-instruct",
+      "valor_eshmia": 0.7273333333333333,
       "valores_normalizados": {
-        "IFEval": 0.726,
-        "BBH": 0.6859999999999999,
-        "MATH": 0.7090000000000001,
-        "GPQA": 0.672,
-        "MUSR": 0.698,
+        "IFEval": 0.779,
+        "BBH": 0.745,
+        "MATH": 0.649,
+        "GPQA": 0.755,
+        "MUSR": 0.735,
         "MMLU-PRO": 0.701
       }
     },
     {
-      "nome_normalizado": "gpt-neox-20b-instruct",
-      "valor_eshmia": 0.6956666666666665,
+      "nome_normalizado": "foundation-x-150b-base",
+      "valor_eshmia": 0.7233333333333333,
       "valores_normalizados": {
-        "IFEval": 0.723,
-        "BBH": 0.6829999999999999,
-        "MATH": 0.706,
-        "GPQA": 0.669,
-        "MUSR": 0.695,
-        "MMLU-PRO": 0.698
+        "IFEval": 0.775,
+        "BBH": 0.741,
+        "MATH": 0.645,
+        "GPQA": 0.7509999999999999,
+        "MUSR": 0.731,
+        "MMLU-PRO": 0.6970000000000001
+      }
+    },
+    {
+      "nome_normalizado": "engage-ai-50b-chat",
+      "valor_eshmia": 0.7203333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.772,
+        "BBH": 0.738,
+        "MATH": 0.642,
+        "GPQA": 0.748,
+        "MUSR": 0.728,
+        "MMLU-PRO": 0.6940000000000001
+      }
+    },
+    {
+      "nome_normalizado": "prompt-perfect-20b-instruct",
+      "valor_eshmia": 0.7163333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.768,
+        "BBH": 0.7340000000000001,
+        "MATH": 0.638,
+        "GPQA": 0.7440000000000001,
+        "MUSR": 0.7240000000000001,
+        "MMLU-PRO": 0.69
+      }
+    },
+    {
+      "nome_normalizado": "deepmind-llm-7b-base",
+      "valor_eshmia": 0.7133333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.765,
+        "BBH": 0.731,
+        "MATH": 0.635,
+        "GPQA": 0.741,
+        "MUSR": 0.721,
+        "MMLU-PRO": 0.687
+      }
+    },
+    {
+      "nome_normalizado": "chatflow-30b-chat",
+      "valor_eshmia": 0.7093333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.7609999999999999,
+        "BBH": 0.727,
+        "MATH": 0.631,
+        "GPQA": 0.737,
+        "MUSR": 0.7170000000000001,
+        "MMLU-PRO": 0.6829999999999999
+      }
+    },
+    {
+      "nome_normalizado": "instruction-genius-40b-instruct",
+      "valor_eshmia": 0.7063333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.758,
+        "BBH": 0.7240000000000001,
+        "MATH": 0.628,
+        "GPQA": 0.7340000000000001,
+        "MUSR": 0.7140000000000001,
+        "MMLU-PRO": 0.68
+      }
+    },
+    {
+      "nome_normalizado": "opensource-llm-80b-base",
+      "valor_eshmia": 0.7023333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.754,
+        "BBH": 0.72,
+        "MATH": 0.624,
+        "GPQA": 0.73,
+        "MUSR": 0.71,
+        "MMLU-PRO": 0.6759999999999999
+      }
+    },
+    {
+      "nome_normalizado": "talkative-ai-14b-chat",
+      "valor_eshmia": 0.6993333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.7509999999999999,
+        "BBH": 0.7170000000000001,
+        "MATH": 0.621,
+        "GPQA": 0.727,
+        "MUSR": 0.7070000000000001,
+        "MMLU-PRO": 0.6729999999999999
+      }
+    },
+    {
+      "nome_normalizado": "command-center-60b-instruct",
+      "valor_eshmia": 0.6953333333333332,
+      "valores_normalizados": {
+        "IFEval": 0.747,
+        "BBH": 0.713,
+        "MATH": 0.617,
+        "GPQA": 0.723,
+        "MUSR": 0.703,
+        "MMLU-PRO": 0.669
+      }
+    },
+    {
+      "nome_normalizado": "knowledge-base-10b-base",
+      "valor_eshmia": 0.6923333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.7440000000000001,
+        "BBH": 0.71,
+        "MATH": 0.614,
+        "GPQA": 0.72,
+        "MUSR": 0.7,
+        "MMLU-PRO": 0.6659999999999999
+      }
+    },
+    {
+      "nome_normalizado": "mistral-7b-instruct-v0.3-merged",
+      "valor_eshmia": 0.597,
+      "valores_normalizados": {
+        "IFEval": 0.7509999999999999,
+        "BBH": 0.628,
+        "MATH": 0.385,
+        "GPQA": 0.452,
+        "MUSR": 0.7090000000000001,
+        "MMLU-PRO": 0.657
+      }
+    },
+    {
+      "nome_normalizado": "llama-3-8b-base-v2.1",
+      "valor_eshmia": 0.5936666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.748,
+        "BBH": 0.625,
+        "MATH": 0.381,
+        "GPQA": 0.449,
+        "MUSR": 0.705,
+        "MMLU-PRO": 0.654
+      }
+    },
+    {
+      "nome_normalizado": "gemma-7b-chat-v1.2-finetuned",
+      "valor_eshmia": 0.5911666666666666,
+      "valores_normalizados": {
+        "IFEval": 0.745,
+        "BBH": 0.623,
+        "MATH": 0.379,
+        "GPQA": 0.447,
+        "MUSR": 0.7020000000000001,
+        "MMLU-PRO": 0.6509999999999999
+      }
+    },
+    {
+      "nome_normalizado": "falcon-7b-instruct-plus",
+      "valor_eshmia": 0.5885,
+      "valores_normalizados": {
+        "IFEval": 0.742,
+        "BBH": 0.62,
+        "MATH": 0.376,
+        "GPQA": 0.445,
+        "MUSR": 0.6990000000000001,
+        "MMLU-PRO": 0.649
+      }
+    },
+    {
+      "nome_normalizado": "qwen-7b-base-alpha",
+      "valor_eshmia": 0.586,
+      "valores_normalizados": {
+        "IFEval": 0.7390000000000001,
+        "BBH": 0.618,
+        "MATH": 0.374,
+        "GPQA": 0.44299999999999995,
+        "MUSR": 0.696,
+        "MMLU-PRO": 0.6459999999999999
+      }
+    },
+    {
+      "nome_normalizado": "openhermes-2.5-mistral-7b-chat",
+      "valor_eshmia": 0.5834999999999999,
+      "valores_normalizados": {
+        "IFEval": 0.736,
+        "BBH": 0.615,
+        "MATH": 0.37200000000000005,
+        "GPQA": 0.441,
+        "MUSR": 0.693,
+        "MMLU-PRO": 0.644
+      }
+    },
+    {
+      "nome_normalizado": "zephyr-7b-beta-v2",
+      "valor_eshmia": 0.5808333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.733,
+        "BBH": 0.613,
+        "MATH": 0.369,
+        "GPQA": 0.439,
+        "MUSR": 0.69,
+        "MMLU-PRO": 0.6409999999999999
+      }
+    },
+    {
+      "nome_normalizado": "phi-3-mini-4k-base",
+      "valor_eshmia": 0.5783333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.73,
+        "BBH": 0.61,
+        "MATH": 0.36700000000000005,
+        "GPQA": 0.43700000000000006,
+        "MUSR": 0.687,
+        "MMLU-PRO": 0.639
+      }
+    },
+    {
+      "nome_normalizado": "tinyllama-1.1b-chat-v1.0",
+      "valor_eshmia": 0.5758333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.727,
+        "BBH": 0.608,
+        "MATH": 0.365,
+        "GPQA": 0.435,
+        "MUSR": 0.684,
+        "MMLU-PRO": 0.636
+      }
+    },
+    {
+      "nome_normalizado": "dolphin-2.6-mistral-7b-instruct",
+      "valor_eshmia": 0.5731666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.7240000000000001,
+        "BBH": 0.605,
+        "MATH": 0.36200000000000004,
+        "GPQA": 0.433,
+        "MUSR": 0.6809999999999999,
+        "MMLU-PRO": 0.634
+      }
+    },
+    {
+      "nome_normalizado": "stable-code-3b-base",
+      "valor_eshmia": 0.5706666666666665,
+      "valores_normalizados": {
+        "IFEval": 0.721,
+        "BBH": 0.603,
+        "MATH": 0.36,
+        "GPQA": 0.431,
+        "MUSR": 0.6779999999999999,
+        "MMLU-PRO": 0.631
+      }
+    },
+    {
+      "nome_normalizado": "nous-hermes-2-mistral-7b-dpo",
+      "valor_eshmia": 0.5681666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.718,
+        "BBH": 0.6,
+        "MATH": 0.358,
+        "GPQA": 0.429,
+        "MUSR": 0.675,
+        "MMLU-PRO": 0.629
+      }
+    },
+    {
+      "nome_normalizado": "openchat-3.5-7b-instruct",
+      "valor_eshmia": 0.5655,
+      "valores_normalizados": {
+        "IFEval": 0.715,
+        "BBH": 0.598,
+        "MATH": 0.355,
+        "GPQA": 0.42700000000000005,
+        "MUSR": 0.672,
+        "MMLU-PRO": 0.626
+      }
+    },
+    {
+      "nome_normalizado": "mistral-7b-v0.2-base",
+      "valor_eshmia": 0.5630000000000001,
+      "valores_normalizados": {
+        "IFEval": 0.7120000000000001,
+        "BBH": 0.595,
+        "MATH": 0.353,
+        "GPQA": 0.425,
+        "MUSR": 0.669,
+        "MMLU-PRO": 0.624
+      }
+    },
+    {
+      "nome_normalizado": "llama-2-7b-chat-hf",
+      "valor_eshmia": 0.5605,
+      "valores_normalizados": {
+        "IFEval": 0.7090000000000001,
+        "BBH": 0.593,
+        "MATH": 0.35100000000000003,
+        "GPQA": 0.423,
+        "MUSR": 0.6659999999999999,
+        "MMLU-PRO": 0.621
+      }
+    },
+    {
+      "nome_normalizado": "gemma-2b-instruct-v1.1",
+      "valor_eshmia": 0.5578333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.706,
+        "BBH": 0.59,
+        "MATH": 0.348,
+        "GPQA": 0.42100000000000004,
+        "MUSR": 0.6629999999999999,
+        "MMLU-PRO": 0.619
+      }
+    },
+    {
+      "nome_normalizado": "falcon-1b-base-v2",
+      "valor_eshmia": 0.5553333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.703,
+        "BBH": 0.588,
+        "MATH": 0.34600000000000003,
+        "GPQA": 0.419,
+        "MUSR": 0.66,
+        "MMLU-PRO": 0.616
+      }
+    },
+    {
+      "nome_normalizado": "vicuna-7b-v1.5-chat",
+      "valor_eshmia": 0.5528333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.7,
+        "BBH": 0.585,
+        "MATH": 0.344,
+        "GPQA": 0.41700000000000004,
+        "MUSR": 0.657,
+        "MMLU-PRO": 0.614
+      }
+    },
+    {
+      "nome_normalizado": "tinyllama-1.1b-instruct-v0.4",
+      "valor_eshmia": 0.5501666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.6970000000000001,
+        "BBH": 0.583,
+        "MATH": 0.341,
+        "GPQA": 0.415,
+        "MUSR": 0.654,
+        "MMLU-PRO": 0.611
+      }
+    },
+    {
+      "nome_normalizado": "pythia-6.9b-base",
+      "valor_eshmia": 0.5476666666666666,
+      "valores_normalizados": {
+        "IFEval": 0.6940000000000001,
+        "BBH": 0.58,
+        "MATH": 0.33899999999999997,
+        "GPQA": 0.413,
+        "MUSR": 0.6509999999999999,
+        "MMLU-PRO": 0.609
+      }
+    },
+    {
+      "nome_normalizado": "mpt-7b-chat-v1",
+      "valor_eshmia": 0.5451666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.691,
+        "BBH": 0.578,
+        "MATH": 0.337,
+        "GPQA": 0.41100000000000003,
+        "MUSR": 0.648,
+        "MMLU-PRO": 0.606
+      }
+    },
+    {
+      "nome_normalizado": "stable-lm-3b-4e1t-instruct",
+      "valor_eshmia": 0.5425,
+      "valores_normalizados": {
+        "IFEval": 0.688,
+        "BBH": 0.575,
+        "MATH": 0.33399999999999996,
+        "GPQA": 0.409,
+        "MUSR": 0.645,
+        "MMLU-PRO": 0.604
+      }
+    },
+    {
+      "nome_normalizado": "redpajama-incite-7b-base-v1",
+      "valor_eshmia": 0.5399999999999999,
+      "valores_normalizados": {
+        "IFEval": 0.685,
+        "BBH": 0.573,
+        "MATH": 0.332,
+        "GPQA": 0.40700000000000003,
+        "MUSR": 0.642,
+        "MMLU-PRO": 0.601
+      }
+    },
+    {
+      "nome_normalizado": "openassistant-llama2-7b-orca-8k",
+      "valor_eshmia": 0.5375,
+      "valores_normalizados": {
+        "IFEval": 0.682,
+        "BBH": 0.57,
+        "MATH": 0.33,
+        "GPQA": 0.405,
+        "MUSR": 0.639,
+        "MMLU-PRO": 0.599
+      }
+    },
+    {
+      "nome_normalizado": "guanaco-7b-hf",
+      "valor_eshmia": 0.5348333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.679,
+        "BBH": 0.568,
+        "MATH": 0.327,
+        "GPQA": 0.40299999999999997,
+        "MUSR": 0.636,
+        "MMLU-PRO": 0.596
+      }
+    },
+    {
+      "nome_normalizado": "dolly-v2-7b",
+      "valor_eshmia": 0.5323333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.6759999999999999,
+        "BBH": 0.565,
+        "MATH": 0.325,
+        "GPQA": 0.401,
+        "MUSR": 0.633,
+        "MMLU-PRO": 0.594
+      }
+    },
+    {
+      "nome_normalizado": "alpaca-7b-chat-merged",
+      "valor_eshmia": 0.5298333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.6729999999999999,
+        "BBH": 0.563,
+        "MATH": 0.32299999999999995,
+        "GPQA": 0.39899999999999997,
+        "MUSR": 0.63,
+        "MMLU-PRO": 0.591
+      }
+    },
+    {
+      "nome_normalizado": "stable-vicuna-13b-instruct",
+      "valor_eshmia": 0.5271666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.67,
+        "BBH": 0.56,
+        "MATH": 0.32,
+        "GPQA": 0.397,
+        "MUSR": 0.627,
+        "MMLU-PRO": 0.589
+      }
+    },
+    {
+      "nome_normalizado": "bloom-7b1-base",
+      "valor_eshmia": 0.5246666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.667,
+        "BBH": 0.5579999999999999,
+        "MATH": 0.318,
+        "GPQA": 0.395,
+        "MUSR": 0.624,
+        "MMLU-PRO": 0.586
+      }
+    },
+    {
+      "nome_normalizado": "gpt4all-j-v1.3-hermes",
+      "valor_eshmia": 0.5221666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.664,
+        "BBH": 0.555,
+        "MATH": 0.316,
+        "GPQA": 0.39299999999999996,
+        "MUSR": 0.621,
+        "MMLU-PRO": 0.584
+      }
+    },
+    {
+      "nome_normalizado": "cerebras-gpt-6.7b-instruct",
+      "valor_eshmia": 0.5195,
+      "valores_normalizados": {
+        "IFEval": 0.6609999999999999,
+        "BBH": 0.5529999999999999,
+        "MATH": 0.313,
+        "GPQA": 0.391,
+        "MUSR": 0.618,
+        "MMLU-PRO": 0.581
+      }
+    },
+    {
+      "nome_normalizado": "openllama-7b-v2-base",
+      "valor_eshmia": 0.5169999999999999,
+      "valores_normalizados": {
+        "IFEval": 0.6579999999999999,
+        "BBH": 0.55,
+        "MATH": 0.311,
+        "GPQA": 0.389,
+        "MUSR": 0.615,
+        "MMLU-PRO": 0.579
+      }
+    },
+    {
+      "nome_normalizado": "koala-7b-hf",
+      "valor_eshmia": 0.5145000000000001,
+      "valores_normalizados": {
+        "IFEval": 0.655,
+        "BBH": 0.5479999999999999,
+        "MATH": 0.309,
+        "GPQA": 0.387,
+        "MUSR": 0.612,
+        "MMLU-PRO": 0.5760000000000001
+      }
+    },
+    {
+      "nome_normalizado": "mpt-30b-instruct",
+      "valor_eshmia": 0.5118333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.652,
+        "BBH": 0.545,
+        "MATH": 0.306,
+        "GPQA": 0.385,
+        "MUSR": 0.609,
+        "MMLU-PRO": 0.574
+      }
+    },
+    {
+      "nome_normalizado": "falcon-40b-base",
+      "valor_eshmia": 0.5093333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.649,
+        "BBH": 0.5429999999999999,
+        "MATH": 0.304,
+        "GPQA": 0.38299999999999995,
+        "MUSR": 0.606,
+        "MMLU-PRO": 0.5710000000000001
+      }
+    },
+    {
+      "nome_normalizado": "llama-2-13b-chat-hf",
+      "valor_eshmia": 0.5068333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.6459999999999999,
+        "BBH": 0.54,
+        "MATH": 0.302,
+        "GPQA": 0.381,
+        "MUSR": 0.603,
+        "MMLU-PRO": 0.569
+      }
+    },
+    {
+      "nome_normalizado": "wizardlm-13b-v1.2",
+      "valor_eshmia": 0.5041666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.643,
+        "BBH": 0.5379999999999999,
+        "MATH": 0.299,
+        "GPQA": 0.379,
+        "MUSR": 0.6,
+        "MMLU-PRO": 0.5660000000000001
+      }
+    },
+    {
+      "nome_normalizado": "mpt-7b-base",
+      "valor_eshmia": 0.5016666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.64,
+        "BBH": 0.535,
+        "MATH": 0.297,
+        "GPQA": 0.377,
+        "MUSR": 0.597,
+        "MMLU-PRO": 0.564
+      }
+    },
+    {
+      "nome_normalizado": "gemma-2b-chat-v1.1",
+      "valor_eshmia": 0.4991666666666666,
+      "valores_normalizados": {
+        "IFEval": 0.637,
+        "BBH": 0.5329999999999999,
+        "MATH": 0.295,
+        "GPQA": 0.375,
+        "MUSR": 0.594,
+        "MMLU-PRO": 0.561
+      }
+    },
+    {
+      "nome_normalizado": "llama-2-7b-instruct-v2",
+      "valor_eshmia": 0.4965,
+      "valores_normalizados": {
+        "IFEval": 0.634,
+        "BBH": 0.53,
+        "MATH": 0.292,
+        "GPQA": 0.373,
+        "MUSR": 0.591,
+        "MMLU-PRO": 0.5589999999999999
+      }
+    },
+    {
+      "nome_normalizado": "pythia-12b-base",
+      "valor_eshmia": 0.494,
+      "valores_normalizados": {
+        "IFEval": 0.631,
+        "BBH": 0.528,
+        "MATH": 0.29,
+        "GPQA": 0.371,
+        "MUSR": 0.588,
+        "MMLU-PRO": 0.556
+      }
+    },
+    {
+      "nome_normalizado": "openassistant-pythia-12b-sft-4",
+      "valor_eshmia": 0.49150000000000005,
+      "valores_normalizados": {
+        "IFEval": 0.628,
+        "BBH": 0.525,
+        "MATH": 0.28800000000000003,
+        "GPQA": 0.369,
+        "MUSR": 0.585,
+        "MMLU-PRO": 0.5539999999999999
+      }
+    },
+    {
+      "nome_normalizado": "stable-lm-7b-alpha-instruct",
+      "valor_eshmia": 0.4888333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.625,
+        "BBH": 0.523,
+        "MATH": 0.285,
+        "GPQA": 0.36700000000000005,
+        "MUSR": 0.5820000000000001,
+        "MMLU-PRO": 0.551
+      }
+    },
+    {
+      "nome_normalizado": "dolly-v2-12b",
+      "valor_eshmia": 0.4863333333333333,
+      "valores_normalizados": {
+        "IFEval": 0.622,
+        "BBH": 0.52,
+        "MATH": 0.28300000000000003,
+        "GPQA": 0.365,
+        "MUSR": 0.579,
+        "MMLU-PRO": 0.5489999999999999
+      }
+    },
+    {
+      "nome_normalizado": "alpaca-13b-chat-merged",
+      "valor_eshmia": 0.4838333333333334,
+      "valores_normalizados": {
+        "IFEval": 0.619,
+        "BBH": 0.518,
+        "MATH": 0.281,
+        "GPQA": 0.363,
+        "MUSR": 0.5760000000000001,
+        "MMLU-PRO": 0.546
+      }
+    },
+    {
+      "nome_normalizado": "vicuna-13b-v1.5-instruct",
+      "valor_eshmia": 0.48116666666666674,
+      "valores_normalizados": {
+        "IFEval": 0.616,
+        "BBH": 0.515,
+        "MATH": 0.278,
+        "GPQA": 0.361,
+        "MUSR": 0.573,
+        "MMLU-PRO": 0.544
+      }
+    },
+    {
+      "nome_normalizado": "bloom-176b-base",
+      "valor_eshmia": 0.47866666666666663,
+      "valores_normalizados": {
+        "IFEval": 0.613,
+        "BBH": 0.513,
+        "MATH": 0.276,
+        "GPQA": 0.359,
+        "MUSR": 0.57,
+        "MMLU-PRO": 0.541
+      }
+    },
+    {
+      "nome_normalizado": "gpt4all-j-v1.3-chat",
+      "valor_eshmia": 0.4761666666666667,
+      "valores_normalizados": {
+        "IFEval": 0.61,
+        "BBH": 0.51,
+        "MATH": 0.27399999999999997,
+        "GPQA": 0.35700000000000004,
+        "MUSR": 0.5670000000000001,
+        "MMLU-PRO": 0.539
+      }
+    },
+    {
+      "nome_normalizado": "cerebras-gpt-13b-instruct",
+      "valor_eshmia": 0.4735,
+      "valores_normalizados": {
+        "IFEval": 0.607,
+        "BBH": 0.508,
+        "MATH": 0.271,
+        "GPQA": 0.355,
+        "MUSR": 0.564,
+        "MMLU-PRO": 0.536
+      }
+    },
+    {
+      "nome_normalizado": "openllama-13b-v2-base",
+      "valor_eshmia": 0.47100000000000003,
+      "valores_normalizados": {
+        "IFEval": 0.604,
+        "BBH": 0.505,
+        "MATH": 0.26899999999999996,
+        "GPQA": 0.353,
+        "MUSR": 0.561,
+        "MMLU-PRO": 0.534
       }
     }
   ],
-  "eshmia_medio": 0.7813633333333333,
+  "eshmia_medio": 0.6558966666666667,
   "metricas_agregadas": {
     "IFEval": {
       "maximo": {
-        "modelo": "llama-3.1-405b-instruct"
+        "modelo": "model-x-70b-instruct"
       },
       "minimo": {
-        "modelo": "gpt-neox-20b-instruct"
+        "modelo": "openllama-13b-v2-base"
       },
-      "media": 0.80804
+      "media": 0.75373
     },
     "BBH": {
       "maximo": {
-        "modelo": "llama-3.1-405b-instruct"
+        "modelo": "model-x-70b-instruct"
       },
       "minimo": {
-        "modelo": "gpt-neox-20b-instruct"
+        "modelo": "openllama-13b-v2-base"
       },
-      "media": 0.76872
+      "media": 0.6811499999999999
     },
     "MATH": {
       "maximo": {
-        "modelo": "llama-3.1-405b-instruct"
+        "modelo": "model-x-70b-instruct"
       },
       "minimo": {
-        "modelo": "gpt-neox-20b-instruct"
+        "modelo": "openllama-13b-v2-base"
       },
-      "media": 0.7918999999999999
+      "media": 0.513
     },
     "GPQA": {
       "maximo": {
-        "modelo": "llama-3.1-405b-instruct"
+        "modelo": "model-x-70b-instruct"
       },
       "minimo": {
-        "modelo": "gpt-neox-20b-instruct"
+        "modelo": "openllama-13b-v2-base"
       },
-      "media": 0.75488
+      "media": 0.6038600000000001
     },
     "MUSR": {
       "maximo": {
-        "modelo": "llama-3.1-405b-instruct"
+        "modelo": "model-x-70b-instruct"
       },
       "minimo": {
-        "modelo": "gpt-neox-20b-instruct"
+        "modelo": "openllama-13b-v2-base"
       },
-      "media": 0.7807999999999999
+      "media": 0.71018
     },
     "MMLU-PRO": {
       "maximo": {
-        "modelo": "llama-3.1-405b-instruct"
+        "modelo": "model-x-70b-instruct"
       },
       "minimo": {
-        "modelo": "gpt-neox-20b-instruct"
+        "modelo": "openllama-13b-v2-base"
       },
-      "media": 0.78384
+      "media": 0.6734600000000001
     }
   },
-  "analise_automatica": "Análise do Ecossistema de IA:\n\nO ESHMIA médio atual do ecossistema é de 0.7814. Este índice representa a performance média dos modelos em relação ao baseline humano nas métricas IFEval, BBH, MATH, GPQA, MUSR e MMLU-PRO.\n\nO modelo em destaque é o Llama 3.1 405B Instruct, que alcançou o maior ESHMIA individual de 0.8995. Isso indica uma performance robusta e equilibrada em todas as métricas avaliadas."
+  "analise_automatica": "Monitoramento do Ecossistema de IA:\n\nAtualmente, os modelos de Inteligência Artificial monitorados apresentam uma eficiência média de 65.6% em relação à performance humana de referência (1.0).\n\nNa análise qualitativa das competências, o ecossistema mostra maior maturidade em **Obediência (seguir instruções)**, atingindo 75.4% do nível humano. Isso indica que as IAs já estão altamente capazes de seguir instruções.\n\nPor outro lado, o maior desafio atual reside na competência de **Cálculo (matemática)**, onde a média do ecossistema é de 51.3%. Ainda existe uma lacuna significativa para atingir a paridade humana em habilidades de matemática.\n\nO modelo de referência atual é o **Model X 70B Instruct**, com um ESHMIA individual de 0.8675, representando o estado da arte na aproximação das capacidades cognitivas humanas."
 }
