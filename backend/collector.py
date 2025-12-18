@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Novo Coletor de Dados - Carrega OpenLLM Leaderboard do CSV
-Substitui o backend antigo que tinha problemas com APIs externas.
+Coletor de Dados - Carrega dados exclusivamente do PostgreSQL
+Substituiu a leitura de CSV pelo acesso direto ao banco de dados PostgreSQL
 """
 
 import os
@@ -9,6 +9,7 @@ import datetime
 import pandas as pd
 from sqlalchemy.orm import Session
 from . import database as db
+from .postgres_collector import PostgresCollector, convert_postgres_row_to_model_data
 
 CSV_FILE = "dados.csv"
 
@@ -45,17 +46,6 @@ def get_mock_data():
         },
     ]
 
-def load_csv_data(filepath: str = CSV_FILE):
-    """Carrega dados do arquivo CSV."""
-    if not os.path.exists(filepath):
-        print(f"⚠️  Arquivo {filepath} não encontrado")
-        return None
-    
-    print(f"📂 Carregando dados do CSV: {filepath}")
-    df = pd.read_csv(filepath)
-    print(f"✅ {len(df)} registros carregados do CSV")
-    return df
-
 def safe_float(value):
     """Converte valor para float, retornando 0.0 se falhar."""
     try:
@@ -65,69 +55,51 @@ def safe_float(value):
 
 def collect_and_store_data(db_session: Session, use_real_data: bool = True, limit: int = 100):
     """
-    Carrega dados do CSV (ou mock) e armazena no banco de dados.
+    Carrega dados exclusivamente do PostgreSQL e armazena no banco de dados local.
     
     Args:
         db_session: Sessão SQLAlchemy
-        use_real_data: Se True, carrega do CSV; se False, usa mock
+        use_real_data: Se True, carrega do PostgreSQL; se False, usa mock
         limit: Número máximo de registros
     """
     print("\n🔍 Coletando dados...")
     
-    # Tenta carregar CSV
     model_list = []
-    
-    # Metrics we need to extract
-    required_csv_columns = ["IFEval", "BBH", "MATH", "GPQA", "MUSR", "MMLU-PRO"]
+    required_metrics = ["IFEval", "BBH", "MATH", "GPQA", "MUSR", "MMLU-PRO"]
     
     if use_real_data:
-        df = load_csv_data(CSV_FILE)
-        if df is not None:
-            # Clean column names to handle potential whitespace
-            df.columns = df.columns.str.strip()
+        # Conecta ao PostgreSQL
+        print("🔗 Conectando ao PostgreSQL...")
+        pg_collector = PostgresCollector()
+        
+        if pg_collector.connect():
+            # Busca dados do último batch
+            print("📥 Buscando dados do último batch no PostgreSQL...")
+            pg_data = pg_collector.get_latest_batch_data(limit=limit)
             
-            for idx, row in df.head(limit).iterrows():
+            # Converte dados do PostgreSQL para formato interno
+            for row in pg_data:
                 try:
-                    # Parse valid metrics
-                    parsed_metrics = {}
-                    is_valid_row = True
+                    model_data = convert_postgres_row_to_model_data(row)
                     
-                    for col in required_csv_columns:
-                        raw_val = row.get(col, None)
-                        # Check for explicitly missing values in CSV like "-", "N/A" before safe_float
-                        if pd.isna(raw_val) or str(raw_val).strip() in ['-', 'N/A', '']:
-                            is_valid_row = False
-                            break
-                        
-                        val = safe_float(raw_val)
-                        if val == 0.0 and raw_val != 0 and raw_val != "0": 
-                             # If safe_float returns 0.0 for non-zero input, it failed parsing (unless input was 0)
-                             # However safe_float handles errors by returning 0.0. 
-                             # Simpler check: if it was truly invalid text, safe_float returned 0.0. 
-                             # But 0.0 is a valid score? Unlikely for these benchmarks but possible. 
-                             # Given the instruction "marque esse modelo como inválido", we assume failure to parse is invalid.
-                             pass
-
-                        parsed_metrics[col] = val
-
-                    if not is_valid_row:
-                        continue
-
-                    model_list.append({
-                        "nome": row.get("Model", f"Model_{idx}"),
-                        "fonte": f"Open LLM Leaderboard ({row.get('Type', 'unknown')})",
-                        "metricas": parsed_metrics,
-                        "url_origem": "https://huggingface.co/spaces/open-llm-leaderboard"
-                    })
+                    # Verifica se tem todas as métricas obrigatórias
+                    if all(metric in model_data.get('metricas', {}) for metric in required_metrics):
+                        model_list.append(model_data)
+                
                 except Exception as e:
-                    print(f"⚠️ Erro ao processar linha {idx}: {e}")
+                    print(f"⚠️  Erro ao processar modelo: {e}")
                     continue
+            
+            pg_collector.disconnect()
+            
+            if not model_list:
+                print("⚠️  Nenhum dado válido do PostgreSQL. Usando dados MOCK...")
+                model_list = get_mock_data()
         else:
-            print("Usando dados MOCK...")
+            print("❌ Falha na conexão com PostgreSQL. Usando dados MOCK...")
             model_list = get_mock_data()
     else:
-        # Update mock data to match new structure if needed, or just let it fail/warn
-        # For now, we assume use_real_data=True is the primary path
+        print("📦 Usando dados MOCK...")
         model_list = get_mock_data()
     
     # Processa e armazena modelos
@@ -144,7 +116,7 @@ def collect_and_store_data(db_session: Session, use_real_data: bool = True, limi
         model_metrics = model_data.get("metricas", {})
         
         # Verify we have all required metrics (strict mode)
-        if not all(k in model_metrics for k in required_csv_columns):
+        if not all(k in model_metrics for k in required_metrics):
              continue
 
         # Verifica se já existe
@@ -188,7 +160,7 @@ def collect_and_store_data(db_session: Session, use_real_data: bool = True, limi
 
 def get_real_data(limit: int = 100):
     """
-    Obtém dados do CSV ou mock.
+    Obtém dados do PostgreSQL ou mock.
     
     Args:
         limit: Número máximo de registros
@@ -196,22 +168,23 @@ def get_real_data(limit: int = 100):
     Returns:
         Lista de dicionários com dados dos modelos
     """
-    df = load_csv_data(CSV_FILE)
-    if df is None:
+    print("🔍 Coletando dados do PostgreSQL...")
+    pg_collector = PostgresCollector()
+    
+    if not pg_collector.connect():
+        print("Usando dados MOCK...")
         return get_mock_data()
     
-    models = []
-    df.columns = df.columns.str.strip()
+    pg_data = pg_collector.get_latest_batch_data(limit=limit)
+    pg_collector.disconnect()
     
-    for idx, row in df.head(limit).iterrows():
-        models.append({
-            "nome": row.get("Model", f"Model_{idx}"),
-            "tipo": row.get("Type", "unknown"),
-            "rank": row.get("Rank", idx + 1),
-            "metricas": {
-                "MMLU": safe_float(row.get("IFEval", 0)) / 100.0,
-                "RE-Bench": safe_float(row.get("BBH", 0)) / 100.0,
-                "HAR": safe_float(row.get("MATH", 0)) / 100.0,
-            }
-        })
-    return models
+    models = []
+    for row in pg_data:
+        try:
+            model_data = convert_postgres_row_to_model_data(row)
+            models.append(model_data)
+        except Exception as e:
+            print(f"⚠️  Erro ao processar modelo: {e}")
+            continue
+    
+    return models if models else get_mock_data()

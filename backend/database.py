@@ -6,7 +6,22 @@ from sqlalchemy.sql import func
 import datetime
 
 # --- Configuração do Banco de Dados ---
-DATABASE_URL = "sqlite:///project.db"
+# Use PostgreSQL se disponível, caso contrário fallback para SQLite
+DB_TYPE = os.getenv('DB_TYPE', 'postgresql')
+
+if DB_TYPE == 'postgresql':
+    # PostgreSQL Configuration
+    POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'centerbeam.proxy.rlwy.net')
+    POSTGRES_PORT = os.getenv('POSTGRES_PORT', '16594')
+    POSTGRES_DB = os.getenv('POSTGRES_DB', 'railway')
+    POSTGRES_USER = os.getenv('POSTGRES_USER', 'postgres')
+    POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'kSYfUUXCRhOPVPwztXwieXmYOGnmSlZD')
+    
+    DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}?sslmode=require"
+else:
+    # SQLite Fallback
+    DATABASE_URL = "sqlite:///project.db"
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -74,13 +89,20 @@ def init_db():
     Inicializa o banco de dados. Cria todas as tabelas e popula com dados iniciais
     (métricas e baselines).
     """
-    # Apaga o banco de dados antigo, se existir, para um início limpo
-    if os.path.exists('project.db'):
+    # Para SQLite, apaga o banco de dados antigo se existir
+    if DB_TYPE != 'postgresql' and os.path.exists('project.db'):
         os.remove('project.db')
 
     Base.metadata.create_all(bind=engine)
     
     db = SessionLocal()
+    
+    # Verifica se as métricas já existem (evita duplicatas em PostgreSQL)
+    existing_metrics = db.query(Metrica).first()
+    if existing_metrics:
+        print("✅ Métricas já existem no banco de dados.")
+        db.close()
+        return
     
     # Popula a tabela de métricas com os baselines humanos
     metricas_iniciais = [
@@ -95,7 +117,7 @@ def init_db():
     db.add_all(metricas_iniciais)
     db.commit()
     
-    print("Banco de dados inicializado com sucesso e métricas populadas.")
+    print("✅ Banco de dados inicializado com sucesso e métricas populadas.")
     
     db.close()
 
