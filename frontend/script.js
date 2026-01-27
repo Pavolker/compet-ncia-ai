@@ -5,8 +5,9 @@
 
 // Configuration
 const CONFIG = {
-    apiUrl: '/api/status', // Updated for Netlify static deployment
-    refreshInterval: 30000, // 30 seconds
+    apiUrl: '/api/status', 
+    staticDataUrl: 'data.json', // Fallback for static deployment
+    refreshInterval: 30000, 
     chartColors: {
         primary: '#667eea',
         secondary: '#764ba2',
@@ -73,14 +74,25 @@ async function loadData(silent = false) {
         if (!silent) showLoading(true);
         updateConnectionStatus('loading');
 
-        const response = await fetch(CONFIG.apiUrl);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        let data;
+        try {
+            // Tenta primeiro a API dinâmica (Flask)
+            const response = await fetch(CONFIG.apiUrl);
+            if (!response.ok) throw new Error('API offline');
+            data = await response.json();
+            console.log('📊 Data loaded from API');
+        } catch (apiError) {
+            console.log('⚠️ API offline, trying static data.json...');
+            // Fallback para o arquivo estático gerado no build
+            const response = await fetch(CONFIG.staticDataUrl);
+            if (!response.ok) {
+                throw new Error(`Static data not found! status: ${response.status}`);
+            }
+            data = await response.json();
+            console.log('📊 Data loaded from static data.json');
         }
 
-        const data = await response.json();
-        console.log('📊 Data loaded:', data);
+        if (!data) throw new Error('No data available');
 
         // Update all sections
         updateHeroStats(data);
