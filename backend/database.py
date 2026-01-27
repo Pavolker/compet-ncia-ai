@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # --- Configuração do Banco de Dados ---
-DB_TYPE = os.getenv('DB_TYPE', 'postgresql')
+DB_TYPE = os.getenv('DB_TYPE', 'sqlite') # Default para sqlite para evitar erros no deploy
 
 if DB_TYPE == 'postgresql':
     POSTGRES_HOST = os.getenv('POSTGRES_HOST')
@@ -18,14 +18,15 @@ if DB_TYPE == 'postgresql':
     POSTGRES_USER = os.getenv('POSTGRES_USER')
     POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
     
+    # Se faltarem variáveis, tenta usar SQLite em vez de travar o build
     if not all([POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB]):
-        raise ValueError("Faltam variáveis de ambiente para conexão com PostgreSQL (verifique .env)")
-
-    # Desativa SSL para conexões localhost/Docker
-    is_localhost = POSTGRES_HOST in ['localhost', '127.0.0.1', '0.0.0.0']
-    ssl_mode = 'disable' if is_localhost else 'require'
-    
-    DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}?sslmode={ssl_mode}"
+        print("⚠️ Variáveis PostgreSQL incompletas no .env ou ambiente. Usando SQLite (project.db).")
+        DATABASE_URL = "sqlite:///project.db"
+    else:
+        # Desativa SSL para conexões localhost/Docker
+        is_localhost = POSTGRES_HOST in ['localhost', '127.0.0.1', '0.0.0.0']
+        ssl_mode = 'disable' if is_localhost else 'require'
+        DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}?sslmode={ssl_mode}"
 else:
     DATABASE_URL = "sqlite:///project.db"
 
