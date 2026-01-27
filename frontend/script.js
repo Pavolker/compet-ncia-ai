@@ -5,7 +5,7 @@
 
 // Configuration
 const CONFIG = {
-    apiUrl: 'data.json', // Updated for Netlify static deployment
+    apiUrl: '/api/status', // Updated for Netlify static deployment
     refreshInterval: 30000, // 30 seconds
     chartColors: {
         primary: '#667eea',

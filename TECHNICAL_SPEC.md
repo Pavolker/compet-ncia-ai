@@ -23,15 +23,16 @@ métrica_normalizada = valor_cru_modelo / baseline_humano
 **Exemplo:**
 ```
 Modelo X:
-- MMLU: 0.92 (baseline humano: 0.89)
-- RE-Bench: 0.98 (baseline humano: 0.95)
-- HAR: 1.15 (baseline humano: 1.0)
+- IFEval: 82.0 (baseline: 100)
+- BBH: 75.0 (baseline: 100)
+- MATH: 68.0 (baseline: 100)
+- GPQA: 55.0 (baseline: 100)
+- MUSR: 72.0 (baseline: 100)
+- MMLU-PRO: 78.0 (baseline: 100)
 
-MMLU_norm = 0.92 / 0.89 = 1.0337
-RE-Bench_norm = 0.98 / 0.95 = 1.0316
-HAR_norm = 1.15 / 1.0 = 1.15
-
-ESHMIA = (1.0337 + 1.0316 + 1.15) / 3 = 1.0718
+Cálculo Normalizado (Valor / 100):
+Média (0.82 + 0.75 + 0.68 + 0.55 + 0.72 + 0.78) / 6 = 0.7166
+ESHMIA = 0.7166
 ```
 
 ### 1.4 Interpretação
@@ -46,23 +47,35 @@ ESHMIA = (1.0337 + 1.0316 + 1.15) / 3 = 1.0718
 
 ## 2. Métricas Componentes
 
-### 2.1 MMLU (Massive Multitask Language Understanding)
-- **Tipo**: Conhecimento geral e raciocínio
-- **Baseline Humano**: 0.89 (89%)
-- **Fonte**: [MMLU Paper](https://arxiv.org/abs/2009.03300)
-- **Descrição**: Avalia conhecimento em 57 disciplinas acadêmicas
+### 2.1 IFEval (Instruction Following Evaluation)
+- **Tipo**: Execução de instruções estruturadas
+- **Baseline Humano**: 100.0
+- **Descrição**: Mede a precisão com que o modelo segue comandos complexos e restrições.
 
-### 2.2 RE-Bench (Reasoning Evaluation Benchmark)
-- **Tipo**: Raciocínio lógico e resolução de problemas
-- **Baseline Humano**: 0.95 (95%)
-- **Fonte**: Benchmark customizado
-- **Descrição**: Testa capacidade de raciocínio complexo
+### 2.2 BBH (Big-Bench Hard)
+- **Tipo**: Raciocínio lógico multietapas
+- **Baseline Humano**: 100.0
+- **Descrição**: Desafios que exigem inferência lógica e manipulação de abstrações.
 
-### 2.3 HAR (Human Alignment Rating)
-- **Tipo**: Alinhamento com valores humanos
-- **Baseline Humano**: 1.0 (100%)
-- **Fonte**: Avaliação customizada
-- **Descrição**: Mede alinhamento ético e segurança
+### 2.3 MATH
+- **Tipo**: Raciocínio matemático formal
+- **Baseline Humano**: 100.0
+- **Descrição**: Problemas de matemática de nível olímpico (álgebra, geometria).
+
+### 2.4 GPQA (Graduate-Level Physics Question Answering)
+- **Tipo**: Conhecimento científico avançado
+- **Baseline Humano**: 100.0
+- **Descrição**: Questões de ciência de nível de pós-graduação.
+
+### 2.5 MUSR (Dialogue Reasoning)
+- **Tipo**: Coerência em diálogos complexos
+- **Baseline Humano**: 100.0
+- **Descrição**: Avalia a manutenção de contexto e estrutura argumentativa.
+
+### 2.6 MMLU-PRO (Massive Multitask Language Understanding)
+- **Tipo**: Conhecimento profissional multidisciplinar
+- **Baseline Humano**: 100.0
+- **Descrição**: Versão avançada do MMLU focada em conhecimento técnico e raciocínio.
 
 ## 3. Arquitetura do Sistema
 

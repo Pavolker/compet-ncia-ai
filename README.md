@@ -11,6 +11,9 @@ O sistema foi projetado para operar de forma totalmente autônoma:
 - Expõe uma API RESTful com os dados processados.
 - Apresenta um dashboard web interativo com gráficos e análises.
 
+> [!IMPORTANT]
+> O sistema utiliza 6 benchmarks principais para o cálculo do ESHMIA: **IFEval, BBH, MATH, GPQA, MUSR e MMLU-PRO**.
+
 **Estado Atual:** ✅ **PROJETO COMPLETO E FUNCIONAL**
 - Backend Flask totalmente implementado e testado
 - Frontend moderno com design premium (glassmorphism, gradientes, animações)
@@ -43,9 +46,10 @@ O sistema foi projetado para operar de forma totalmente autônoma:
 
 ```bash
 # Instalar dependências
-pip install -r backend/requirements.txt
+pip install -r backend/requirements.txt python-dotenv
 
-# Executar o sistema completo (inicializa DB, coleta dados mock, calcula métricas e inicia servidor)
+# Configurar variáveis de ambiente
+# Renomeie o arquivo .env.example para .env e preencha as credenciais
 python3 run.py
 
 # Tentar coleta real (pode falhar se a API do HuggingFace estiver instável)
@@ -93,7 +97,7 @@ Acesse o dashboard em: **http://127.0.0.1:5001**
 ### 📊 Estatísticas em Tempo Real
 - **ESHMIA Médio**: Índice médio do ecossistema de IA
 - **Modelos Ativos**: Quantidade de modelos em monitoramento
-- **Métricas**: MMLU, RE-Bench, HAR
+- **Métricas**: IFEval, BBH, MATH, GPQA, MUSR, MMLU-PRO
 - **Última Atualização**: Timestamp da última coleta
 
 ### 📈 Visualizações Interativas
@@ -177,10 +181,8 @@ ESHMIA = (MMLU_norm + RE-Bench_norm + HAR_norm) / 3
 onde X_norm = valor_cru / baseline_humano
 ```
 
-**Baselines Humanos:**
-- MMLU: 0.89
-- RE-Bench: 0.95
-- HAR: 1.0
+**Baselines Humanos (Norm=1.00):**
+- IFEval / BBH / MATH / GPQA / MUSR / MMLU-PRO: 100.0 (Escala 0-100)
 
 ### Comandos Úteis
 

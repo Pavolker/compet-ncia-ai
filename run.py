@@ -6,6 +6,7 @@ Automates the complete workflow: data collection, calculation, and server startu
 
 import sys
 import time
+import os
 from backend import database as db
 from backend import collector
 from backend import calculator
@@ -74,14 +75,15 @@ def calculate_metrics():
 def start_server():
     """Start the Flask server"""
     print("\n🚀 Step 4: Starting web server...")
+    port = int(os.getenv('PORT', 3000))
     print("\n" + "="*60)
-    print("   Dashboard available at: http://127.0.0.1:5001")
-    print("   API endpoint: http://127.0.0.1:5001/api/status")
+    print(f"   Dashboard available at: http://127.0.0.1:{port}")
+    print(f"   API endpoint: http://127.0.0.1:{port}/api/status")
     print("="*60 + "\n")
     print("   Press CTRL+C to stop the server\n")
     
     try:
-        app.run(debug=False, port=5001, host='127.0.0.1', use_reloader=False)
+        app.run(debug=False, port=port, host='127.0.0.1', use_reloader=False)
     except KeyboardInterrupt:
         print("\n\n👋 Server stopped. Goodbye!")
         sys.exit(0)

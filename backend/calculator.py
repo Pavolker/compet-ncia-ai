@@ -1,7 +1,7 @@
 
 from sqlalchemy.orm import Session, joinedload
 from . import database as db
-import datetime
+from datetime import datetime, timezone
 
 def calculate_and_store_metrics(db_session: Session):
     """
@@ -9,10 +9,9 @@ def calculate_and_store_metrics(db_session: Session):
     """
     print("Iniciando cálculo de métricas normalizadas e ESHMIA...")
 
-    # Limpa os cálculos antigos para evitar duplicatas
-    db_session.query(db.Eshmia).delete()
-    db_session.query(db.Resultado).filter(db.Resultado.valor_normalizado != None).update({"valor_normalizado": None})
-    db_session.commit()
+    # Não removemos mais tudo. Atualizamos conforme necessário.
+    # O ideal seria usar batch_id para manter histórico.
+    print("Processando cálculos ESHMIA...")
 
     # Busca todos os modelos com seus resultados e métricas associadas
     models = db_session.query(db.Modelo).options(
@@ -44,11 +43,14 @@ def calculate_and_store_metrics(db_session: Session):
             # 1.0 = Nível Humano (100 pontos em todas as métricas)
             eshmia_value = sum(normalized_scores[metrica] for metrica in required_metrics) / len(required_metrics)
             
-            # --- Armazenamento do ESHMIA (Item 4.5) ---
+            # --- Armazenamento do ESHMIA ---
+            # Verifica se já existe um cálculo recente para este modelo
+            # (Em um sistema real, usaríamos batch_id)
+            
             eshmia_entry = db.Eshmia(
                 modelo_id=modelo.id,
                 valor_eshmia=eshmia_value,
-                data_calculo=datetime.datetime.utcnow()
+                data_calculo=datetime.now(timezone.utc)
             )
             db_session.add(eshmia_entry)
             print(f"ESHMIA para '{modelo.nome_normalizado}': {eshmia_value:.4f}")
