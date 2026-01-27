@@ -622,6 +622,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('sidebarToggle');
     const closeSidebarBtn = document.getElementById('closeSidebar');
 
+    // Centauro Button (New)
+    const centauroBtn = document.getElementById('centauroBtn');
+
     // Modal Elements
     const modal = document.getElementById('readingModal');
     const closeModalBtn = document.getElementById('closeModal');
@@ -701,18 +704,25 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
         card.addEventListener('click', () => {
             const id = card.getAttribute('data-id');
-            const content = thesisContent[id];
-
-            if (content) {
-                modalTitle.textContent = content.title;
-                modalBody.innerHTML = `<p>${content.text}</p>`;
-                modal.classList.add('open');
-
-                // Close sidebar on mobile/desktop appropriately if needed? 
-                // Currently keeping it open logic.
-            }
+            openThesisModal(id);
         });
     });
+
+    // Centauro Button Click
+    if (centauroBtn) {
+        centauroBtn.addEventListener('click', () => {
+            openThesisModal(8); // 8 is "O Projeto Centauro"
+        });
+    }
+
+    function openThesisModal(id) {
+        const content = thesisContent[id];
+        if (content) {
+            modalTitle.textContent = content.title;
+            modalBody.innerHTML = `<p>${content.text}</p>`;
+            modal.classList.add('open');
+        }
+    }
 
     // Close Modal
     if (closeModalBtn && modal) {
